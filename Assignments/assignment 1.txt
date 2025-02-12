@@ -1,0 +1,100 @@
+Q1. What is Emmet?
+Ans. Emmet is a set of plug-ins in text-editors that helps in faster coding and editing in languages like html, xml etc.
+
+Eg :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- div#nav>div.logo+ul#list_items>li*4>a -->
+    <div id="nav">
+        <div class="logo"></div>
+        <ul id="list_items">
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+---------------------------------------------------------------------
+
+
+Q2. Difference between a Library and Framework?
+Ans. Library : A library is a collection of class definitions which consists of inbuilt already defined functions that can be called upon by the user depending on their needs. When a library is imported its functions can be called directly. They are very fast and thus has a narrow scope resulting in faster APIs.
+Eg : ReactJS, java.util, etc.
+
+Framework : A framework can be understood as a skeleton or an architecture of an application which is an abstraction of the entire app and thus allows users to completely modify the app in their own way. A framework is not called like a library. They have a wider scope and thus are comparatively slower and more complex to design.
+Eg : NodeJS, Angular, etc.
+
+to be more clear with the difference :
+
+framework --calls--> user --calls--> library
+
+---------------------------------------------------------------------
+
+
+Q3. What is CDN? Why do we use it?
+Ans. A Content Delivery Network(CDN) is a group of interconnected servers that help caches content close to end users. In laymen terms, it allows users to use the assets for loading an image, webpage, video or any other documents easily without changing a lot of code in the existing program. Thus, this reduces network bandwidths, make websites load faster and allows security and privacy. Also, websites with CDN always stay online due to the use of distributed network servers and Routing algorithms like AnyCast routing.
+
+Eg : In JavaScript, we can use CDN for React by adding these codes into our html document :
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+---------------------------------------------------------------------
+
+
+Q4. Why is React known as React?
+Ans. React was devoloped by Facebook and React is called React because it was devoloped to be reactive(responsive and fast) for the changes that are done to the webpages thus creating an endless and seamless experience for users. 
+Instead of writing same piece of code again and again react library provides a way to add components on the webpages faster and more efficiently thus also reducing the complexity while writing a program.
+
+---------------------------------------------------------------------
+
+
+Q5. What is crossorigin in script tag?
+Ans. A crossorigin attribute allows the functionality of CORS(Cross-Origin-Resource_Sharing) to be implemented in the html code. This attribute allows the content or elements to be used from a sever that is not from the origin thus allowing a browser to fetch data from severs other than its origin.
+This attribute allows values like "user-credentials" to fetch data that matches the credentials of the users only from the other server. if this attribute is give "", it is treated as anonymous thus no credentials or any other configurations are exchanged and the exchange is done blindly.
+
+Eg :
+<script crossorigin="user-credentials" src="index.js"></script>
+
+---------------------------------------------------------------------
+
+
+Q6. What is diference between React and ReactDOM?
+Ans. React is a library that is used for building intefaces and components like elements while ReactDOM is a complementary library used with React that glues these components to the browser using render() or other methods.
+
+---------------------------------------------------------------------
+
+
+Q7.  What is difference between react.development.js and react.production.js files via CDN?
+Ans. react.development.js is used for development purposes like for building a small project or using react for experimental purposes.
+
+react.production.js is used for production purposes that is when these links are embedded in a html file they are used for producing a bigger project that are actually used for commercial projects.
+
+Performance also increases in production as compared to development modes.
+
+---------------------------------------------------------------------
+
+Q8. What is async and defer? - see my Youtube video ;)
+Ans. async and defer are the two attributes that can be used with script tag.
+a) without using any attributes, the browser first parses the code, waits for the source file to fetch and then executes and then starts the parsing again.
+b) async attribute : with this attribute the browser parses and fetches the source file simultaneously and then executes the file and starts the parsing again.
+c) defer attribute : with this attribute the browser parses, fetches the source file simulatneously. Once the parsing is done for whole of the HTML file then only the fetched file is excuted.
+
+generally, defer is most used but other are used depending on the situations.
+
+For diagram go to notes in the JavaScript+React Notebook.
+
+---------------------------------------------------------------------
+
+
