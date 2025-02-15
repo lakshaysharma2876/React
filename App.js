@@ -1,7 +1,3 @@
-import React from "react";
-import ReactDOM from 'react-dom/client';
-
-
 const heading = React.createElement(
     "h1",
     {
@@ -23,10 +19,8 @@ const heading = React.createElement(
     },
     [heading, heading2]
   );
-  
   console.log(heading);
-  
-  const root = ReactDOM.createRoot(document.getElementById('root'));
+  const root = ReactDOM.createRoot(document.getElementById("root"));
   //passing a react element inside the root
   //async defer
   root.render(container);

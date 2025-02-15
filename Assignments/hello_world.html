@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- using html only -->
+    <h1 id="first">Hello World</h1>
+
+    <!-- using JS Dom only -->
+    <script>
+        let parent = document.getElementById('first');
+        console.log(parent.innerHTML);
+
+        let heading = document.createElement('h3');
+        heading.textContent = "Hello World from JS DOM";
+        console.log(heading.innerHTML);
+
+        
+        parent.appendChild(heading);
+    </script>
+
+    <!-- using React CDN only -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        let heading2 = React.createElement('p', {
+            id : "third"
+        }, "Hello World from React and React DOM");
+
+        let root = ReactDOM.createRoot(document.getElementById("first"));
+        root.render(heading2);
+
+
+    </script>
+</body>
+</html>
