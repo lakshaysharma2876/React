@@ -1,0 +1,112 @@
+Q1. What is `NPM`?
+Ans. NPM is a node package manager, it loads up all the packages and bundlers and other important modules and folders required to create a react app. It consists of three important parts/components : 
+
+a) website : to know about the services offered by npm
+b) CLI : command line interface that is used by the devolopers to interact and modify the project
+c) registry : it can be understood as the database serving for your project containing all the important documents and meta data about the surroundings in your project.
+
+------------------------------------------------------------------------------
+
+
+Q2. What is `Parcel/Webpack`? Why do we need it?
+Ans. Parcel or Webpack are bundlers that are largely used by devolopers to bundle the multiple web development files (like JS, CSS, etc) and minify and optimize them for faster and responsive web applications. They take in a bundle and optimizes them and return a bundle that is faster and much more optimized. Without bundlers the web applications will take a long time to render the webpages thus resulting in decrease of output.
+
+------------------------------------------------------------------------------
+
+
+Q3. What is `.parcel-cache`?
+Ans. '.parcel-cache' is a folder that is created after running build command. This contains all the important information that is used for building your project. It also helps to rebuild the app faster because it maintains the cache for your latest project thus resulting in a more optimized building time for your project.
+
+
+------------------------------------------------------------------------------
+
+
+Q4. What is `npx` ?
+Ans. This command builds a project and launches it (either the development or the production version) using a bundler. This command takes two commands with it.
+Eg : npx <bundler-name> <entry-point> //for development purposes
+     npx <bundler-name> build <entry-point> // for production purposes
+
+------------------------------------------------------------------------------
+
+
+Q5. What is difference between `dependencies` vs `devDependencies`?
+Ans. In software development, dependencies are the packages that are used for a production project to function properly whereas dev-dependencies are the tools and aids necessary for development and testing for our project.
+
+------------------------------------------------------------------------------
+
+
+Q6. What is Tree Shaking?
+Ans. This is a function of bundler(eg. Webpack) that is used to eliminate dead-code from our project. Any unused code within the project is removed by the bundler during bundling so that the code loads up faster.
+Eg. if we import a library, then we can only use any function from that library and the other functions are removed during project build as they are regarded as "dead-code".
+
+------------------------------------------------------------------------------
+
+
+Q7. What is Hot Module Replacement?
+Ans. This is one of the features of parcel that makes it powerful. This feature allows the live browser to reload automatically corresponding to the changes that are made to the project without reloading and running the npx command again and again.
+
+------------------------------------------------------------------------------
+
+
+Q8. List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+Ans. 5 superpowers of Parcel :
+a) Hot Module Replacement : Explained in q7.
+
+b) File watcher algorithms : These algorithms automatically updates any changes/modification done to our files without explicitly doing so in the package.json or package-lock.json files. These algos are written in c++.
+
+c) broswersList : This feature of parcel allows the project to be compatible with the older versions of the browser that may or may not support the react apps
+
+d) Image compression
+e) Caching while development
+f) Minifying
+
+------------------------------------------------------------------------------
+
+
+Q9. What is `.gitignore`? What should we add and not add into it?
+Ans. .gitignore folder contains the file that devolopers don't want others to keep track of. So, the files under these are not tracked by git BUT the folder itself is being tracked and monitored by git.
+The folder contains :
+a) temporary files
+b) log files
+c) parcel-cache folder
+d) payment gateways 
+e) personal information
+f) .env folder, etc.
+
+------------------------------------------------------------------------------
+
+
+Q10. What is the difference between `package.json` and `package-lock.json` ?
+Ans. `package.json` file contains information about the version, name, author, entry points, dependencies, modules and other important information about our project in a semantic fashion. These can be modified or updated according to devolopers.
+
+However, `package-lock.json` file contains the information that is actually the snapshot of the current versions and information in `package.json` file. This folder is automatically created by npm during installation .These are automatically updated by the npm. This folder should not be modified by the devolopers.
+
+
+------------------------------------------------------------------------------
+
+
+Q11. Why should I not modify `package-lock.json`?
+Ans. `package-lock.json` contains the actual information about the project like version, name and author and current dependencies of the project. It is like a snapshot of package.json folder. Changing this folder can lead to dependencies inconsistency and can lead to crashing of our react app or moreover expose the vulnerabilities to others.
+
+
+------------------------------------------------------------------------------
+
+
+Q12. What is `node_modules` ? Is it a good idea to push that on git?
+Ans. `node_modules` contains all the important files that are required for building our project like babel, graphs, react, react-DOM, modules and libraries. Thus the size of this folder is very huge and moreover all these are not required by the server to load our website, so pushing this folder into git is not advisable.
+
+------------------------------------------------------------------------------
+
+
+Q13. What is the `dist` folder?
+Ans. This is called the distributed folder and it contains all the production ready files like HTML, javascript or css files that are required to launch our react app. It contains hash files for all the corresponding files in the main folder.
+
+------------------------------------------------------------------------------
+
+
+Q14. What is `browserlists`
+Ans. This is one of the features of parcel bundler and this is used to create an object inside package.json file that allows the react app to be compatible with other versions of the current or other browsers that may or may not support current react versions.
+
+
+
+ 
