@@ -5,8 +5,9 @@
   "license": "ISC",
   "author": "Lakshay",
   "type": "commonjs",
-  "main": "third.js",
   "scripts": {
+    "start" : "parcel hello_world.html",
+    "build" : "parcel build hello_world.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
