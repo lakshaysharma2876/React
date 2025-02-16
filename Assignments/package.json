@@ -1,0 +1,19 @@
+{
+  "name": "assignments",
+  "version": "1.0.0",
+  "description": "This is my practice webapp",
+  "license": "ISC",
+  "author": "Lakshay",
+  "type": "commonjs",
+  "main": "third.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

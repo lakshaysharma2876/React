@@ -1,0 +1,28 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "my first react app",
+  "homepage": "https://github.com/lakshaysharma2876/React#readme",
+  "bugs": {
+    "url": "https://github.com/lakshaysharma2876/React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakshaysharma2876/React.git"
+  },
+  "license": "ISC",
+  "author": "Lakshay",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
