@@ -1,0 +1,19 @@
+Q1. What is JSX?
+Ans. JSX is Javascript-XML that is used to write HTML-like syntax using Javascript. This is a syntax extension unlike React which is a library. This allows users to write codes directly into Javascript file without much of a hassle like using react alone. React and JSX are not complimentary to each other they can be used separately but devs use them together due to their ease of use.
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+Q2. Superpowers of JSX.
+Ans. a) JSX supports HTML tags but every tag should be closed with its complimentary closing tag.
+b) JSX makes the code more readable and managable and makes the code tedious.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q3. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX.
+Ans. {TitleComponent} is used to insert a Javascript snippet or react element inside functional component of JSX.
+
+{<TitleComponent />} is used to call a functional component inside another functional component, thus achieving component composition. This can aslo be used as {TitleComponent()}, both works the same.
+
+{<TitleComponent></TitleComponent>} works similarly like {<TitleComponent />}
