@@ -1,51 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const myList = React.createElement(
-  "ol",
-  {
-    id: "bikes",
-  },
-  "my favourite 3 bikes: "
-);
+const MyList = <h1 id="Title" key="first">My favourite bikes :</h1>;
 
-const listedItems1 = React.createElement(
-  "li",
-  {
-    id: "one",
-  },
-  "Husqvarna Vitpilen 401"
-);
 
-const listedItems2 = React.createElement(
-  "li",
-  {
-    id: "two",
-  },
-  "Ninja HX"
-);
+const HeaderComponent = () => {
+  return (
+    <div>
+    {MyList},
+    <ul>
+      <li> Ninja H2</li>
+      <li>Royal Enfield GT Continental 650</li>
+      <li> Husqvarna Vitpilen 401</li>
+    </ul>
+    </div>
+  );
+}
 
-const listedItems3 = React.createElement(
-  "li",
-  {
-    id: "three",
-  },
-  "Royal Enflied Continental GT 650"
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const listed_Items = React.createElement(
-  "div",
-  {
-    id: "sdiv",
-  },
-  myList,
-  listedItems1,
-  listedItems2,
-  listedItems3
-);
-
-//console.log(listed_Items);
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(listed_Items);
+root.render(HeaderComponent ());
