@@ -1580,13 +1580,13 @@ function cuisine_items (items) {
     return (items.name);
 }
 
-const RestaurantCards = (props) => {
+const RestaurantCards = ({name, cuisine, image, ratingNew}) => {
     return (
         <div className="cards">
             <img src={image?.url}/>
-            <h3>{name}</h3>
+            <h2><u>{name}</u></h2>
             <h3>{cuisine.map(cuisine_items).join(", ")}</h3>
-            <h3>{ratingNew.ratings?.DINING?.rating} stars</h3>
+            <h3>Reviews : {ratingNew.ratings?.DINING?.rating} stars</h3>
         </div>
     );
 }
@@ -1594,10 +1594,11 @@ const RestaurantCards = (props) => {
 const BodyComponent = () => {
     return (
         <div className="restaurant-list">
-            <RestaurantCards restaurant={RestaurantList[0].info}/>
-            <RestaurantCards />
-            {/* <RestaurantCards/>
-            <RestaurantCards/> */}
+            {
+                RestaurantList.map(restaurant => {
+                    return <RestaurantCards {...restaurant.info}/>
+                })
+            }
         </div>
     );
 }
