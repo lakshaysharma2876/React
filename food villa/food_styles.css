@@ -2,10 +2,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff9800;
+    background-image: url("http://media.istockphoto.com/id/1031030598/photo/big-family-dinner-in-process-top-view-vertical-image-on-table-with-food-and-hands.jpg?s=170667a&w=0&k=20&c=G7srpkkIM3fBAyS_Ph4vOqph8gwcOF7m8xBBPRJAOws=");
+    background-size: cover;
+    position: relative;
     padding: 15px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Add a white overlay */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity */
+    z-index: 1;
+}
+
+/* Make sure content is above the overlay */
+.header * {
+    position: relative;
+    z-index: 2;
+}
+
 
 #food_icon_image {
     width: 100px;

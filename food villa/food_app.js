@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 const HeaderComponent = () => {
     return (
-        <div className="header">
+        <div className="header" >
             <a href="/">
             <img id="food_icon_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVoZjD7O31QdLKhNwoD57fdVsxRxgDL2rG3g&s" alt ="Food Villa icon"/>
             </a>
