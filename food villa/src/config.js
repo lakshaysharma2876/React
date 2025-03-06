@@ -1,23 +1,4 @@
-import React from "React";
-import ReactDOM from "react-dom/client";
-
-const HeaderComponent = () => {
-    return (
-        <div className="header" >
-            <a href="/">
-            <img id="food_icon_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVoZjD7O31QdLKhNwoD57fdVsxRxgDL2rG3g&s" alt ="Food Villa icon"/>
-            </a>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact Us</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-    );
-}
-
-const RestaurantList = 
+export const RestaurantList = 
     [
         {
             "type": "restaurant",
@@ -1576,50 +1557,8 @@ const RestaurantList =
         }
     ];
 
-function cuisine_items (items) {
+export function cuisine_items (items) {
     return (items.name);
 }
 
-const RestaurantCards = ({name, cuisine, image, ratingNew}) => {
-    return (
-        <div className="cards">
-            <img src={image?.url}/>
-            <h2><u>{name}</u></h2>
-            <h3>{cuisine.map(cuisine_items).join(", ")}</h3>
-            <h3>Reviews : {ratingNew.ratings?.DINING?.rating} stars</h3>
-        </div>
-    );
-}
-
-const BodyComponent = () => {
-    return (
-        <div className="restaurant-list">
-            {
-                RestaurantList.map(restaurant => {
-                    return <RestaurantCards {...restaurant.info}/>
-                })
-            }
-        </div>
-    );
-}
-
-const FooterComponent = () => {
-    return (
-        <div className="footer">
-            Footer
-        </div>
-    );
-}
-
-const FinalLayout = () => {
-    return (
-        <>
-        <HeaderComponent/>
-        <BodyComponent/>
-        <FooterComponent/>
-        </>
-    );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<FinalLayout/>);
+export const IMG_CDN = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVoZjD7O31QdLKhNwoD57fdVsxRxgDL2rG3g&s";
