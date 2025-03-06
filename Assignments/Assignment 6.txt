@@ -1,0 +1,22 @@
+Q1. What is the difference between Named Export, Default export and * as export?
+Ans. Named export is a feature of JavaScript that allows you to use a specific function/ element from a library or module to directly be imported in your current file using { }. You have to mention against the elements or functions the keyword 'export' to use this .
+Default export allows you to import the function/elements using 'default' keyword. These can be imported without mentioning {} in the current file and there is no need to use export keyword while making a default export at the function/element
+* as export allows you to export all the functionalities of the module/package/ library as a variable which can later be used to invoke functionalities of the module using . operator
+
+Eg : import React from "react";    //default import 
+      import { createElement } from "react-dom";  //named import
+      import * as React from "react"   // * as import
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+Q2. What is the importance of config.js file?
+Ans. config.js file contains all the hardcoded data that might be required by the components or the web app repeatedly in different files. So it is stored at one place. It is also known as constants.js file.
+
+--------------------------------------------------------------------------------------------------------
+
+
+Q3. Why do we need a useState Hook?
+Ans. useState() hook allows you to use the local state variable inside the React app and helps to update the local state variables if any changes are made to the variable state. 
