@@ -1,0 +1,60 @@
+Q1. What is a Microservice?
+Ans. Microservice is a software design approach in which we can divide our whole software into multiple smaller projects and all these smaller projects can communicate with each other using APIs. This allows the concurrent production of the software and multiple projects to be devoloped by the devs without waiting for other projects to finish as done in monolithic system design approach.
+
+Thus there are multiple components of the software like UI/UX, Backend, Authentication, etc.. and these are used and communicated through APIs.
+
+----------------------------------------------------------------------------------------------------------
+
+
+Q2. What is Monolith architecture?
+Ans. This is a software design approach and this allows the devs to design an entire software within a single project. This way you donot need any APIs to communicate with each constituents projects. Thus devs can work on a single project simultaneously but however you have to deploy the entire project everytime to ensure the changes.
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+Q3. Why do we need a useEffect Hook?
+Ans. useEffect() hook helps us to handle the side effects whenever a page is re-rendered. It takes a callback function and dependencies array as arguments. The callback function is the side effect that we want to happen and the array contains the element that tells us how many times this hook leads to re-rendering of the pages.
+
+Only state and props leads to the re rendering of the webpage.
+
+----------------------------------------------------------------------------------------------------------
+
+
+Q4. What is Shimmer UI?
+Ans. Shimmer UI can be understood as the skeleton of the webpage that we want to show while the API and other dependencies on the webpage are loading. It contains empty cards, placeholders and blank areas that creates an illusion that something will fill up this blank spaces in the webpage.
+
+----------------------------------------------------------------------------------------------------------
+
+
+Q5. What is the difference between JS expression and JS statement ? 
+Ans. JS expression is a bit of JS code that produces a value while JS statement is the instruction that we want the computer to do.
+Eg : let a = 6; //JS statement
+    console.log("hi"); //JS expression
+
+The simple trick to find out whether the given piece of code is an expression or statement we console.log out the code. If it produces an output it is an expression, if it throws an error then its a statement.
+
+In react, you cannot use statements within JSX but only expressions.
+
+
+----------------------------------------------------------------------------------------------------------
+
+Q6. What is Conditional Rendering, explain with a code example
+Ans. Conditional Rendering refers to the rendering of components that should be done only according to the choice. Only these parts are rendered not the whole webpage.
+
+Eg : 
+const Header = () => {
+    return allRestaurants?.length === 0 ? 
+    (<ShimmerUI>) :
+    (
+        <>
+        </>
+    )
+}
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+Q7. What is CORS?
+Ans. 

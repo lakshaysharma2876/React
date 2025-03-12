@@ -1,6 +1,6 @@
 import RestaurantCards from "./RestaurantCard";
 import { RestaurantList } from "../config";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function filterData(searchText, restaurantsArray) {
   if (!searchText) return restaurantsArray;
@@ -9,6 +9,16 @@ function filterData(searchText, restaurantsArray) {
   );
   return data;
 }
+
+
+useEffect(() => {
+  getRestaurants();
+}, []); 
+
+async function getRestaurants() {
+  const data = await fetch("");
+}
+
 
 const Body = () => {
   const [restaurantsArray, setRestaurantsArray] = useState(RestaurantList);
