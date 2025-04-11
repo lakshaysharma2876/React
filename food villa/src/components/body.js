@@ -11,9 +11,9 @@ function filterData(searchText, restaurantsArray) {
 }
 
 
-useEffect(() => {
-  getRestaurants();
-}, []); 
+// useEffect(() => {
+//   getRestaurants();
+// }, []); 
 
 async function getRestaurants() {
   const data = await fetch("");

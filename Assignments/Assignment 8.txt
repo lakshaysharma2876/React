@@ -57,4 +57,25 @@ const Header = () => {
 
 
 Q7. What is CORS?
-Ans. 
+Ans. CORS stands for Cross Origin Resource Sharing and this is a web mechanism implemented by web browsers as a security measure to allow a resource to request from another domain that is outside the scope of domain from which the resource originated from.
+This allows the cross scripting feature as multiple resources can now share and access resources from different domains without compromising security features.
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+Q8. What is async and await?
+Ans. async and await are the keywords in JavaScript(JS) that allows user to decalre a function as asynchronous that is quite contradictory to the synchronous feature of JavaScript. When you declare a function as async then the browser looks for the await expression or function inside the async function to be called and once called this asnyc function is executed as a callback function.
+
+Remember only those functions can be declared as asnyc if they contains an await expression.
+
+Eg :- async fetchFunc() {
+        await fetch("link")
+      }
+
+
+---------------------------------------------------------------------------------------------------------- 
+
+
+Q9. What is the use of `const json = await data.json();` in getRestaurants()
+Ans. This statement makes the use of await keyword and halts the rendering until the data.json() is received and processed and then it is stored in the json variable.
