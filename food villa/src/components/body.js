@@ -11,19 +11,24 @@ function filterData(searchText, restaurantsArray) {
 }
 
 
-// useEffect(() => {
-//   getRestaurants();
-// }, []); 
-
-async function getRestaurants() {
-  const data = await fetch("");
-}
-
 
 const Body = () => {
   const [restaurantsArray, setRestaurantsArray] = useState(RestaurantList);
   const [filteredRestaurantsArray, setfilteredRestaurantsArray] = useState(RestaurantList);
   const [searchText, setSearchText] = useState("");
+
+  // useEffect(() => {
+  //   getRestaurants();
+  // }, []); 
+  
+
+  // async function getRestaurants() {
+  //   const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
+  //   const json = await data.json();
+  //   setRestaurantsArray(json);
+  // }
+
+  //if you want more data use hard-coded data
 
   return (
     <>
