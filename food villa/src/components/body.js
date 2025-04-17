@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 
 function filterData(searchText, restaurantsArray) {
-  if (!searchText) return restaurantsArray;
   const data = restaurantsArray.filter((restaurant) =>
     restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
   );
@@ -20,7 +19,7 @@ const Body = () => {
 
   useEffect(() => {
     getRestaurants();
-  }, [searchText]); 
+  }, []); 
   
 
   async function getRestaurants() {
@@ -28,13 +27,22 @@ const Body = () => {
 
     const jsonData = await data.json();
     console.log(jsonData)
-    setRestaurantsArray(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
-    setfilteredRestaurantsArray(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
+    setRestaurantsArray(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
+    setfilteredRestaurantsArray(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
   }
 
   //if you want more data use hard-coded data
 
-  return (restaurantsArray === 0 || filteredRestaurantsArray === 0) ? <ShimmerUI/> : (
+
+  //early return
+  if(!restaurantsArray || !filteredRestaurantsArray) return null;
+  //if(filteredRestaurantsArray.length === 0) return <h1>nothing found</h1>
+
+
+  return (restaurantsArray.length === 0 ||
+    filteredRestaurantsArray.length === 0) ? (
+    <ShimmerUI />
+  ) : (
     <>
       <div className="search-container">
         <input
@@ -58,9 +66,9 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="restaurant-list">
+      <div className="restaurant-list" >
         {filteredRestaurantsArray.map((restaurant) => {
-          return <RestaurantCards {...restaurant.info} />;
+          return <RestaurantCards {...restaurant?.info} key={restaurant?.info?.id} />;
         })}
       </div>
     </>
