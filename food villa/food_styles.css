@@ -193,3 +193,61 @@
        background-position-x: 0%
     }
  }
+
+ .restaurantInfo {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.restaurantInfo h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.restaurantInfo ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.restaurantInfo li {
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.restaurantInfo li:hover {
+  transform: scale(1.02);
+}
+
+.restaurantInfo h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.restaurantInfo img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.restaurantInfo p {
+  margin: 4px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.restaurantInfo p:last-child {
+  font-weight: bold;
+  color: #000;
+}
