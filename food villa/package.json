@@ -2,18 +2,17 @@
   "name": "food-villa",
   "version": "1.0.0",
   "description": "",
-  "main": "food_app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel food_index.html",
-    "build": "build parcel food_index.html"
+    "build": "parcel build food_index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "parcel": "^2.13.3",
+    "parcel": "^2.15.2",
     "process": "^0.11.10"
   },
   "dependencies": {
