@@ -2,6 +2,7 @@ import RestaurantCards from "./RestaurantCard";
 import { RestaurantList } from "../config";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router";
 
 function filterData(searchText, restaurantsArray) {
   const data = restaurantsArray.filter((restaurant) =>
@@ -39,8 +40,8 @@ const Body = () => {
   //if(filteredRestaurantsArray.length === 0) return <h1>nothing found</h1>
 
 
-  return (restaurantsArray.length === 0 ||
-    filteredRestaurantsArray.length === 0) ? (
+  return restaurantsArray.length === 0 ||
+    filteredRestaurantsArray.length === 0 ? (
     <ShimmerUI />
   ) : (
     <>
@@ -66,9 +67,17 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="restaurant-list" >
+      <div className="restaurant-list">
         {filteredRestaurantsArray.map((restaurant) => {
-          return <RestaurantCards {...restaurant?.info} key={restaurant?.info?.id} />;
+          return (
+            <Link
+              to={"/restaurant/" + restaurant.info.id}
+              key={restaurant?.info?.id}
+              style={{textDecoration : "none"}}
+            >
+              <RestaurantCards {...restaurant?.info} />
+            </Link>
+          );
         })}
       </div>
     </>
