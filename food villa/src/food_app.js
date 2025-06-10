@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import ReactDOM from "react-dom/client";
 import Header from "./components/header";
 import Body from "./components/body";
@@ -12,7 +12,7 @@ const FinalLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet />
       <Footer />
     </>
   );
@@ -25,19 +25,23 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
+        path: "/",
+        element: <Body />,
+      },
+      {
         path: "/about",
         element: <About />,
       },
       {
         path: "/home",
-        element: <FinalLayout />,
+        element: <Body />,
       },
       {
-        path: "/ContactUs",
+        path: "/contactUs",
         element: <ContactUs />,
       },
       {
-        path: "/Cart",
+        path: "/cart",
         element: <Cart />,
       },
     ],
