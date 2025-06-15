@@ -1,0 +1,54 @@
+Q1. How do you create Nested Routes react-router-dom cofiguration
+Ans. Nested routes in react-router can be created using children attribute of the createBrowserRouter.
+    The element of the parent router should be <Outlet /> and its children should be the path of the route after the parent route.
+
+    Eg : {
+        path: "/about",
+        element: <Outlet />,
+        children: [
+          {
+            path: "/user",
+            element: <UserProfile />,
+          },
+          {
+            path: "/admin",
+            element: <AdminProfile />,
+          },
+        ],
+      },
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Q2. What is the order of life cycle method calls in Class Based Components
+Ans.  constructor() ---> render() ---> componentDidMount() ---> componentDidUpdate() ---> componentWillUnmount() 
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Q3. Why do we use componentDidMount?
+Ans. componentDidMount() is a commit phase method in the life cycle of Class Based Components. This method is used to display the first render after the component has mounted. generally it is used to make an API call inside a component and this only renders after the initial render of the component.
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Q4. Why do we use componentWillUnmount? Show with example.
+Ans. componentWillUnmount() is used to remove the component from the DOM and let another component mount on the DOM. This method is used to stop any callback functions being executed by the previous component and thus allowing newer components to mount.
+
+Eg : async componentDidMount() {
+   this.timer = setInterval(()=> {
+        console.log("still mounted");
+    },1000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    console.log("component Unmounted");
+  }
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Q5. 

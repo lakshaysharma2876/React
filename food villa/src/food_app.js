@@ -8,6 +8,8 @@ import ContactUs from "./components/ContactUs";
 import Cart from "./components/Cart";
 import Error from "./components/Error";
 import RestaurantInfo from "./components/RestaurantInfo";
+import AdminProfile from "./components/AdminProfile";
+import UserProfile from "./components/UserProfile";
 
 const FinalLayout = () => {
   return (
@@ -26,12 +28,28 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        index : true,
+        index: true,
         element: <Body />,
       },
       {
         path: "/about",
-        element: <About />,
+        element: <Outlet />,
+        children: [
+          {
+            index : true,
+            element: <About />,
+          },
+          {
+            path: "user",
+            element: <UserProfile />,
+          },
+          {
+            path: "admin",
+            element: (
+              <AdminProfile name="Lakshay" email="lakshay2876@gmail.com" />
+            ),
+          },
+        ],
       },
       {
         path: "/home",
@@ -46,9 +64,9 @@ const appRouter = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path : "/restaurant/:id",
-        element : <RestaurantInfo />
-      }
+        path: "/restaurant/:id",
+        element: <RestaurantInfo />,
+      },
     ],
   },
 ]);
