@@ -3,10 +3,11 @@ import React from "react";
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+    //this.state is just a JavaScript object
     this.state = {
       userInfo: {
-        name: "Dummy",
-        userID: "Dummy",
+        name: null,
+        userID: null,
       },
     };
 
@@ -43,12 +44,12 @@ class UserProfile extends React.Component {
     console.log("this is the render function")
     //have to return JSX from render() method
     return (
-      <>
+      <div className="aboutUs">
         <h1>This is the user Page</h1>
-        <h2>User name : {this.state.userInfo.name}</h2>
         <img src={this.state.userInfo.avatar_url}></img>
+        <h2>User name : {this.state.userInfo.name}</h2>
         <h2>UserID : {this.state.userInfo.id}</h2>
-      </>
+        </div>
     );
   }
 }

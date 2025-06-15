@@ -251,3 +251,40 @@
   font-weight: bold;
   color: #000;
 }
+
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main title */
+.aboutUs h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* User avatar styling */
+.aboutUs img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3498db;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Subheadings for name and ID */
+.aboutUs h2 {
+  font-size: 1.4rem;
+  color: #34495e;
+  margin: 8px 0;
+}
