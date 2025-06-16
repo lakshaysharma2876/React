@@ -59,5 +59,21 @@ Ans. Whenever a child class(our component class) inherits a parent class(React.C
 
 
 Q6.Why can't we have the callback function of useEffect async?
-Ans. 
+Ans. we cannot use async with the callback function of the useEffect() hook because an async function returns a promise that has states but useEffect() callback function expects only two things as a return value :
+  1. undefined(nothing)
+  2. cleanup function(a function that executes after a functional component is Unmounted or the effect re-run agains).
+
+  If, we use async then it will return a promise and thus react will not know what to do with the promise returned
+
+  Eg: useEffect(async ()=> {
+
+  });
+
+  this is invalid as this returns a promise
+
+  useEffect(()=> {
+    async () {}
+  });
+
+  this is valid and it returns undefined
 
