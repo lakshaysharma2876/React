@@ -51,4 +51,13 @@ Eg : async componentDidMount() {
 -------------------------------------------------------------------------------------------------------------------
 
 
-Q5. 
+Q5. Why do we use super(props) in constructor?
+Ans. Whenever a child class(our component class) inherits a parent class(React.Component), to use the 'this' context we have to use super() to call the constructor of the parent class, this helps us to use this.props from the parent class and now we can initalize our this.props and use its member functions or variables, like this.state,etc.
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Q6.Why can't we have the callback function of useEffect async?
+Ans. 
+
