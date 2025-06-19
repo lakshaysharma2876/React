@@ -1,4 +1,5 @@
 import React from "react";
+import { USER_PROFILE_CDN } from "../config";
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class UserProfile extends React.Component {
   async componentDidMount() {
     console.log("component mounted");
 
-    const data = await fetch("https://api.github.com/users/lakshaysharma2876");
+    const data = await fetch(USER_PROFILE_CDN);
     const dataJSON = await data.json();
 
     console.log(dataJSON);
