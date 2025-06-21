@@ -15,7 +15,6 @@ const Body = () => {
   if(!isOnline) {
     return <h1>🔴Oops! Looks like you dont have an active Internet Connection</h1>
   }
-
   //early return
   if (!restaurantsArray || !filteredRestaurantsArray) return null;
 
@@ -24,7 +23,9 @@ const Body = () => {
     <ShimmerUI />
   ) : (
     <>
+    
       <div className="search-container">
+        <h1>🟢</h1>
         <input
           type="text"
           id="search-bar"
