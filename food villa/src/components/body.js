@@ -23,19 +23,19 @@ const Body = () => {
     <ShimmerUI />
   ) : (
     <>
-    
-      <div className="search-container">
-        <h1>🟢</h1>
-        <input
+    <h1 className="font-bold text-2xl py-3 px-2">Hey, user what you feeling to eat today!!</h1>
+      <div className="flex flex-wrap px-2 gap-x-2">
+        
+        <input className="border-1 rounded-sm p-1 focus-within:p-1"
           type="text"
           id="search-bar"
-          placeholder="Search"
+          placeholder="🔍Search"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
         ></input>
-        <button
+        <button className="bg-white px-2 border-1 text-black font-medium rounded-sm hover:bg-gray-100"
           id="search-btn"
           onClick={() => {
             //to filter the restaurants based on the searched text
@@ -44,19 +44,19 @@ const Body = () => {
             setfilteredRestaurantsArray(data);
           }}
         >
-          Search
+          <h1 className="hover:text-red-500">Search</h1>
         </button>
       </div>
-      <div className="restaurant-list">
+      <div className="flex flex-wrap content-between shadow">
         {filteredRestaurantsArray.map((restaurant) => {
           return (
-            <Link
-              to={"/restaurant/" + restaurant.info.id}
-              key={restaurant?.info?.id}
-              style={{ textDecoration: "none" }}
+            <div key={restaurant?.info?.id} className="p-2">
+              <Link
+              to={"/restaurant/" + restaurant?.info?.id}
             >
               <RestaurantCards {...restaurant?.info} />
             </Link>
+            </div>
           );
         })}
       </div>
