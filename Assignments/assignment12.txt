@@ -1,0 +1,19 @@
+Q1. Explore all the ways of writing css.
+Ans. there are multiple ways of writing css into our app. some of them are : 
+    1. External CSS : In this way, you write all your css in one file and then use it in your app using import statement.
+    
+    2. Inline CSS : In this way, you write CSS with your elements/components inside the same file you are working on.
+    
+    3. SASS and SCSS : Syntactically Awesome StyleSheets(SASS) and Sassy CSS(SCSS) can be used to write CSS in .sass or .scss extension file using css like syntax but they also allow use of variables,mixing,inheritance and functions to enhance the features of a standard css.
+    
+    4. Libraries : There are multiple libraries available like MaterialUI, BaseUI, AntUI, ChakraUI that can be installed as packages inside our project. They provide built-in components desgin that can be simply used inside the project but they are not customizable and doing customization may lead to inconsistency among deisgn of components.
+
+    5. Framework : Frameworks like TailwindCSS can be used to make our project use css within the original file and this is the trending way of doing CSS.
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q2. In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)?
+Ans. 
