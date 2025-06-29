@@ -11,13 +11,25 @@ import RestaurantInfo from "./components/RestaurantInfo";
 import AdminProfile from "./components/AdminProfile";
 import UserProfile from "./components/UserProfile";
 import Instamart from "./components/Instamart";
+import { useContext, useState } from "react";
+import userContext from "./utils/userContext";
 
 const FinalLayout = () => {
+
+  const [info, setInfo] = useState({
+    "name" : "Lakshay Sharma",
+    "email" : "lakshay2876@gmail.com"
+  })
+
   return (
     <>
       <Header />
       <Outlet />
-      <Footer />
+      <userContext.Provider value={ {
+        user : info
+      }}>
+        <Footer />
+      </userContext.Provider>
     </>
   );
 };
