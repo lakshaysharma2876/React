@@ -10,6 +10,7 @@ import Error from "./components/Error";
 import RestaurantInfo from "./components/RestaurantInfo";
 import AdminProfile from "./components/AdminProfile";
 import UserProfile from "./components/UserProfile";
+import Instamart from "./components/Instamart";
 
 const FinalLayout = () => {
   return (
@@ -62,6 +63,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path : "/instamart",
+        element : <Instamart/>,
       },
       {
         path: "/restaurant/:id",
