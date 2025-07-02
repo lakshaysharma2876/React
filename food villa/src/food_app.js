@@ -11,25 +11,30 @@ import RestaurantInfo from "./components/RestaurantInfo";
 import AdminProfile from "./components/AdminProfile";
 import UserProfile from "./components/UserProfile";
 import Instamart from "./components/Instamart";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import userContext from "./utils/userContext";
+import store from "./utils/store";
+import { Provider } from "react-redux";
 
 const FinalLayout = () => {
-
-  const [info, setInfo] = useState({
-    "name" : "Lakshay Sharma",
-    "email" : "lakshay2876@gmail.com"
-  })
+  const [info] = useState({
+    name: "Lakshay Sharma",
+    email: "lakshay2876@gmail.com",
+  });
 
   return (
     <>
-      <Header />
-      <Outlet />
-      <userContext.Provider value={ {
-        user : info
-      }}>
-        <Footer />
-      </userContext.Provider>
+      <Provider store={store}>
+        <Header />
+        <Outlet />
+        <userContext.Provider
+          value={{
+            user: info,
+          }}
+        >
+          <Footer />
+        </userContext.Provider>
+      </Provider>
     </>
   );
 };
@@ -49,7 +54,7 @@ const appRouter = createBrowserRouter([
         element: <Outlet />,
         children: [
           {
-            index : true,
+            index: true,
             element: <About />,
           },
           {
@@ -77,8 +82,8 @@ const appRouter = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path : "/instamart",
-        element : <Instamart/>,
+        path: "/instamart",
+        element: <Instamart />,
       },
       {
         path: "/restaurant/:id",

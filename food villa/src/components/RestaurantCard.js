@@ -15,7 +15,7 @@ const RestaurantCards = ({ name, cuisines, cloudinaryImageId, avgRating }) => {
       <h2 className="text-md break-words whitespace-normal mb-1 font-medium">
         {cuisines?.join(", ")}
       </h2>
-      <h3 className="text-md font-medium">Reviews: {avgRating} stars</h3>
+      <h3 className="text-md font-medium mb-1">Reviews: {avgRating} stars</h3>
     </div>
   );
 };
