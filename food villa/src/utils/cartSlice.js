@@ -15,8 +15,7 @@ const cartSlice = createSlice({
              state.items = [] ;
         },
         clearItem : (state,action) => {
-            const index = state.items.indexOf(action.payload);
-            state.items.splice(index,1);
+            state.items.splice(action.payload,1);
         },
     }
 });

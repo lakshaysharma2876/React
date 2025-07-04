@@ -53,7 +53,7 @@ const RestaurantInfo = () => {
             <li key={main?.id}>
               <PropertiesOfRestaurant {...main} />
               <button
-                className="w-full rounded-2xl border-2 p-1 mt-1 font-bold cursor-pointer"
+                className="w-full rounded-2xl border-2 p-1 mt-1 font-bold cursor-pointer transition-transform hover:scale-105 duration-300 hover:bg-amber-100"
                 onClick={() => {
                   handleAddItems(main);
                 }}

@@ -65,6 +65,11 @@ export const PropertiesOfRestaurant = (props) => {
 
 export const CartThings = (props) => {
 
+  const dispatch = useDispatch();
+  const removeCartItems = (item) => {
+    dispatch(clearItem(item));
+  }
+
   return (
     <div className="flex items-center bg-white shadow-md rounded-xl p-4 m-3 transition-transform hover:scale-105 duration-300">
       <img
@@ -84,6 +89,14 @@ export const CartThings = (props) => {
       <p className="text-sm text-yellow-700 font-medium">
         Rating: {props.ratings?.aggregatedRating?.rating || "N/A"} ⭐
       </p>
+      <button
+                className="border-1 font-bold cursor-pointer"
+                onClick={({prop}) => {
+                  removeCartItems(prop);
+                }}
+              >
+                ➖
+              </button>
       </div>
     </div>
   );

@@ -13,9 +13,6 @@ const cart = () => {
     dispatch(clearCart(item));
   };
 
-  const removeCartItems = (item) => {
-    dispatch(clearItem(item));
-  }
   return cartItems.length == 0 ? (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
       <img src={EMPTY_CART} className="w-50 h-50"></img>
@@ -43,14 +40,7 @@ const cart = () => {
             <div className="flex-wrap shadow" key={index}>
             <li>
               <CartThings {...item} />
-              <button
-                className="border-1 font-bold cursor-pointer"
-                onClick={(item) => {
-                  removeCartItems(item);
-                }}
-              >
-                ➖
-              </button>
+              
             </li>
             </div>
           );
