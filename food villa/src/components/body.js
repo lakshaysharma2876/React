@@ -22,13 +22,12 @@ const Body = () => {
     filteredRestaurantsArray.length === 0 ? (
     <ShimmerUI />
   ) : (
-    <>
+    <div className="flex-grow">
     <h1 className="font-bold text-2xl py-3 px-2">Hey, user what you feeling to eat today!!</h1>
-      <div className="flex flex-wrap px-2 gap-x-2">
+      <div className="flex flex-wrap grow px-2 gap-x-2">
         
         <input className="border-1 rounded-sm p-1 focus-within:p-1"
           type="text"
-          id="search-bar"
           placeholder="🔍Search"
           value={searchText}
           onChange={(e) => {
@@ -36,7 +35,6 @@ const Body = () => {
           }}
         ></input>
         <button className="bg-white px-2 border-1 text-black font-medium rounded-sm hover:bg-gray-100"
-          id="search-btn"
           onClick={() => {
             //to filter the restaurants based on the searched text
             const data = filterData(searchText, restaurantsArray);
@@ -60,7 +58,7 @@ const Body = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -2,6 +2,8 @@ import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { PropertiesOfRestaurant } from "../utils/helper";
+import {useDispatch} from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantInfo = () => {
   
@@ -30,6 +32,15 @@ const RestaurantInfo = () => {
     setRestaurant(details);
   }
 
+  
+  const dispatch = useDispatch();
+
+  const handleAddItems = (items) => {
+    dispatch(addItem(items));
+  };
+
+  
+
   return !restaurant ? (
     <ShimmerUI />
   ) : (
@@ -41,6 +52,14 @@ const RestaurantInfo = () => {
           return (
             <li key={main?.id}>
               <PropertiesOfRestaurant {...main} />
+              <button
+                className="w-full rounded-2xl border-2 p-1 mt-1 font-bold cursor-pointer"
+                onClick={() => {
+                  handleAddItems(main);
+                }}
+              >
+                Add item
+              </button>
             </li>
           );
         })}
