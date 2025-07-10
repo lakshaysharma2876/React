@@ -22,6 +22,6 @@
     "start": "parcel food_index.html",
     "build": "parcel build food_index.html",
     "test": "jest",
-    "watch-test" : "jest --watch"
+    "watch-test": "jest --watch"
   }
 }
