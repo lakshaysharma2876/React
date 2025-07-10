@@ -1,6 +1,14 @@
 {
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
     "@tailwindcss/postcss": "^4.1.10",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.0.4",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
     "parcel": "^2.15.4"
   },
   "dependencies": {
@@ -12,6 +20,8 @@
   },
   "scripts": {
     "start": "parcel food_index.html",
-    "build": "parcel build food_index.html"
+    "build": "parcel build food_index.html",
+    "test": "jest",
+    "watch-test" : "jest --watch"
   }
 }
